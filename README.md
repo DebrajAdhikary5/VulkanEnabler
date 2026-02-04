@@ -59,7 +59,7 @@ This tool modifies the `debug.hwui.renderer` system property. While this is gene
 ## 🤝 Credits & Acknowledgements
 
 * **Main Developer:** [Debraj5 / DebrajAdhikary5]
-* **Inspiration:** Based on the UI design of **GAMA** by [Link to your friend's repo or "Popovicialinc"].
+* **Inspiration:** Based on the UI design of **GAMA** by [https://github.com/popovicialinc/gama].
 
 ---
 
