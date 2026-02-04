@@ -4,46 +4,58 @@
 ![OS](https://img.shields.io/badge/OS-Windows-blue)
 ![License](https://img.shields.io/badge/License-MIT-orange)
 
-**EnableVulkan Ultimate** is a lightweight, Windows-based tool designed to enforce the **Skia (Vulkan)** rendering pipeline globally on Android devices.
+A lightweight Windows utility that enforces the Skia (Vulkan) rendering pipeline globally on Android devices via ADB. Designed to unlock **smoother UI animations**, **optimized gaming performance**, and **improved battery efficiency** for supported apps.
 
-By default, many Android devices (even modern ones) default to OpenGL for system UI and standard apps. This tool unlocks the power of the Vulkan API, potentially improving performance in supported applications, emulators, and games.
+**This is an "All-in-One" package.** It comes pre-bundled with the necessary Android Platform Tools, so you can just download, unzip, and run!
 
 ## ✨ Features
 
 * **Global Vulkan Enforcement:** Switches the system property `debug.hwui.renderer` to `skiavk`.
 * **Live Status Check:** Built-in diagnostic tool to verify if apps are running on Vulkan or OpenGL.
 * **Smart App Refresh:** Includes a "Force-Stop" utility to safely restart user apps so they pick up the new graphics settings.
-* **System UI Soft-Reboot:** Attempts to restart the system interface (Status bar, Launcher) without a full phone reboot.
+* **System UI Soft-Reboot:** Attempts to restart the system interface without a full phone reboot.
 * **Safety First:** Includes options to easily revert back to OpenGL defaults.
 
 ## 📱 Requirements
 
-* **PC:** Windows 10 or 11.
-* **Android Device:** Android 10 or newer (required for Skia support).
-* **Drivers:** Installed ADB Drivers for your specific phone.
-* **USB Debugging:** Enabled in your phone's Developer Options.
+Before you begin, ensure you have the following:
 
-## 📥 Installation
+1.  **PC:** Windows 10 or 11.
+2.  **Android Device:** Android 10 or newer (required for Skia support).
+3.  **USB Debugging:** Enabled in your phone's Developer Options.
+4.  **USB Drivers:** **CRITICAL!** You must have the correct USB/ADB drivers installed for your specific phone (Samsung, Xiaomi, Pixel, etc.).
+    * *See the "How to Install Drivers" section below if you are unsure.*
 
-1.  **Download ADB:** Ensure you have the Android SDK Platform Tools (`adb.exe`) on your PC.
-2.  **Download the Script:** Download `EnableVulkan_Ultimate.bat` from this repository.
-3.  **Place the File:** Move the `.bat` file **inside** your `platform-tools` folder (the same folder where `adb.exe` is located).
+## 📥 Installation & Usage
 
-   > *Note: If you have ADB added to your Windows PATH environment variable, you can run the script from anywhere.*
+**No complex setup required.**
 
-## 🛠️ How to Use
+1.  **Download:** Get the latest release `.zip` file from this repository.
+2.  **Extract:** Unzip the folder to your Desktop or preferred location.
+3.  **Connect:** Plug your Android phone into your PC via USB.
+4.  **Run:** Open the extracted folder and double-click **`EnableVulkan_Ultimate.bat`**.
+5.  **Follow the Menu:**
+    * Choose **Option [1]** to enable Vulkan.
+    * Use **Option [3]** to refresh your running apps.
 
-1.  Connect your Android device to your PC via USB.
-2.  Double-click **`EnableVulkan_Ultimate.bat`**.
-3.  The tool will automatically detect your device.
-4.  Choose **Option [1]** to enable Vulkan.
-5.  Follow the on-screen prompts.
-    * *Tip: Use **Option [3]** after enabling Vulkan to ensure all your running apps switch over to the new engine.*
+## 🔌 How to Install Drivers (Important)
+
+If the tool shows **"Disconnected"** or does not detect your phone, you are likely missing the correct drivers.
+
+**Option A: Official OEM Drivers (Recommended)**
+Google maintains a list of drivers for every major brand (Samsung, Xiaomi, Moto, etc.).
+* 👉 **[Download Official Android OEM USB Drivers](https://developer.android.com/studio/run/oem-usb)**
+
+**Option B: Universal ADB Driver (Alternative)**
+If the official drivers don't work, you can try the universal open-source installer.
+* 👉 **[Download Universal ADB Driver](https://adb.clockworkmod.com/)**
+
+**After installing drivers:** Unplug your phone, plug it back in, and run the script again. Watch your phone screen for a pop-up asking to "Allow USB Debugging" and click **Allow**.
 
 ## 🔍 Verification
 
 Not sure if it worked? Use **Option [4]** in the main menu!
-This runs a diagnostics check (`dumpsys gfxinfo`) and filters the output.
+This runs a diagnostics check and shows you the active pipeline:
 
 * ✅ **Success:** `Pipeline=Skia (Vulkan)`
 * ❌ **Default:** `Pipeline=Skia (OpenGL)`
@@ -56,10 +68,10 @@ This tool modifies the `debug.hwui.renderer` system property. While this is gene
 * Some older apps or heavily skinned ROMs may experience visual glitches with Vulkan forced.
 * If you experience crashes, simply restart your phone or use **Option [2]** to revert to OpenGL.
 
-## 🤝 Credits & Acknowledgements
+## 🤝 Credits
 
 * **Main Developer:** [Debraj5 / DebrajAdhikary5]
-* **Inspiration:** Based on the UI design of **GAMA** by [https://github.com/popovicialinc/gama].
+* **Inspiration:** **GAMA** by [https://github.com/popovicialinc/gama].
 
 ---
 
