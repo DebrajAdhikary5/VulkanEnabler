@@ -33,7 +33,7 @@ Before you begin, ensure you have the following:
 1.  **Download:** Get the latest release `.zip` file from this repository.
 2.  **Extract:** Unzip the folder to your Desktop or preferred location.
 3.  **Connect:** Plug your Android phone into your PC via USB.
-4.  **Run:** Open the extracted folder and double-click **`EnableVulkan_Ultimate.bat`**.
+4.  **Run:** Open the extracted folder and double-click **`EnableVulkan.bat`**.
 5.  **Follow the Menu:**
     * Choose **Option [1]** to enable Vulkan.
     * Use **Option [3]** to refresh your running apps.
